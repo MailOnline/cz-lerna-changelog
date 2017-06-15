@@ -6,22 +6,15 @@ module.exports = (allPackages, changedPackages) => ([
     name: 'type',
     message: 'Select the type of change that you\'re committing:',
     choices: [
-      {value: 'feat',     name: 'feat:     ✨  A new feature (note: this will indicate a release)'},
-      {value: 'fix',      name: 'fix:      🛠  A bug fix (note: this will indicate a release)'},
-      {value: 'docs',     name: 'docs:     Documentation only changes'},
-      {value: 'style',    name: 'style:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)'},
-      {value: 'refactor', name: 'refactor: A code change that neither fixes a bug nor adds a feature'},
-      {value: 'perf',     name: 'perf:     A code change that improves performance'},
-      {value: 'test',     name: 'test:     Adding missing tests'},
-      {value: 'chore',    name: 'chore:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation'},
-      {value: 'revert',   name: 'revert:   Revert to a commit'},
-      {value: 'WIP',      name: 'WIP:      Work in progress'}
+      {value: 'feat', name: 'feat:      A new feature'},
+      {value: 'fix', name: 'fix:      A bug fix'},
+      {value: 'docs', name: 'docs:     Documentation only changes'},
+      {value: 'style', name: 'style:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)'},
+      {value: 'refactor', name: 'refactor: A code change that neither fixes a bug or adds a feature'},
+      {value: 'perf', name: 'perf:     A code change that improves performance'},
+      {value: 'test', name: 'test:     Adding missing tests'},
+      {value: 'chore', name: 'chore:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation'}
     ],
-  },
-  {
-    type: 'input',
-    name: 'scope',
-    message: 'Denote the scope of this change:',
   },
   {
     type: 'input',
@@ -37,7 +30,7 @@ module.exports = (allPackages, changedPackages) => ([
   {
     type: 'input',
     name: 'body',
-    message: 'Provide a longer description of the change (optional). Use "|" to break new line:\n'
+    message: 'Provide a longer description of the change (optional).\n'
   },
   {
     type: 'input',
@@ -47,7 +40,7 @@ module.exports = (allPackages, changedPackages) => ([
   {
     type: 'input',
     name: 'footer',
-    message: 'List any ISSUES CLOSED by this change (optional). E.g.: #31, #34:\n',
+    message: 'Reference any task that this commit closes:\n Issues:\n',
   },
   {
     type: 'checkbox',
